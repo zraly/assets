@@ -131,7 +131,7 @@ final class Helpers
 
 	public static function isPortOpen(string $host, int $port): bool
 	{
-		$fp = @fsockopen($host, $port, timeout: 0);
+		$fp = @fsockopen($host, $port, timeout: 1);
 		if (!$fp) {
 			return false;
 		}
